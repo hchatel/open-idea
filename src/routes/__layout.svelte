@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <title>My test app</title>
+    <title>Open Idea</title>
 </svelte:head>
 
 <Nav />
