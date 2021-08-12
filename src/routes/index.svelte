@@ -1,16 +1,9 @@
 <script lang="typescript">
-    import IdeaCard from '../components/IdeaCard.svelte';
+    import IdeasList from '../components/IdeasList';
     import type { Idea } from '../models/idea';
+    import ideasString from '../ideas.json';
 
-    const idea: Idea =  {
-        createdAt: new Date(),
-        description: 'Dire "Titre !" quand un collègue dis quelmque chose sujet à interprétation qui pourrait être assimilé à un contenu NSFW.',
-        downvotes: 36,
-        title: "Titre",
-        upvotes: 3000,
-    }
+    const ideas = ideasString.map(({ createdAt, ...idea }) => ({ ...idea, createdAt: new Date(createdAt) })) as Idea[];
 </script>
 
-<div class="container mx-auto px-4 flex flex-col items-center">
-    <IdeaCard idea={idea} />
-</div>
+<IdeasList ideas={ideas} />

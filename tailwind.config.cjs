@@ -1,9 +1,13 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
+require('tailwindcss/plugin');
 
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.svelte'],
   darkMode: false, // or 'media' or 'class'
+  mode: 'jit',
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
+  purge: ['./src/**/*.svelte'],
   theme: {
     colors: {
       ...colors,
@@ -15,5 +19,4 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
 }
