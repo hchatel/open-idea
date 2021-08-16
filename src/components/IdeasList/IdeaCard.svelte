@@ -1,23 +1,12 @@
 <script lang="typescript">
-    import type { Idea } from "src/models/idea";
-    import Icon, { ThumbDown, ThumbUp } from 'svelte-hero-icons';
+    import type { Idea } from "../../models/idea";
+    import TextLink from "../TextLink.svelte";
+    import VoteButtons from "../VoteButtons/VoteButtons.svelte";
 
 
     export let idea: Idea;
 
-    const { createdAt, description, downvotes, title, upvotes } = idea;
-    const votes = [
-        {
-            color: "text-green-400",
-            icon: ThumbUp,
-            count: upvotes,
-        },
-        {
-            color: "text-red-400",
-            icon: ThumbDown,
-            count: downvotes,
-        },
-    ]
+    const { createdAt, description, downvotes, id, title, upvotes } = idea;
 </script>
 
 
@@ -31,17 +20,10 @@
                     timeStyle: "short",
                 })}</p>
             </div>
-            <div class="flex">
-                {#each votes as { color, count, icon }}
-                    <button class="flex justify-evenly cursor-pointer rounded-md flex-col items-center mr-2 shadow-md hover:shadow-lg w-14">
-                        <Icon class={`w-5 h-5 ${color}`} src="{icon}" />
-                        <div class="text-gray-600 text-sm">{count}</div>
-                    </button>
-                {/each}
-            </div>
+            <VoteButtons {downvotes} {upvotes} />
         </div>
         <p class="line-clamp-3 text-gray-800 text-base">{description}</p>
-        
+        <TextLink class="block mt-4 text-rose-400" href={`ideas/${id}`} label="Lire plus" />
     </div>
 {/if}
 
