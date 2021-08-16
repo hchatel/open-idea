@@ -1,12 +1,13 @@
 <script lang="typescript">
     import IdeaCard from './IdeaCard.svelte';
     import type { Idea } from '../../models/idea';
+    import Container from '../Container.svelte';
 
     export let ideas: Idea[];
 </script>
 
-<div class="container mx-auto px-4 flex flex-col items-center">
+<Container>
     {#each ideas as idea}
         <IdeaCard idea={idea} />
     {/each}
-</div>
+</Container>
