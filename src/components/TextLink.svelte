@@ -1,5 +1,5 @@
 <script lang="typescript">
-    let className = "";
+    let className = '';
     export { className as class };
     export let href: string;
     export let label: string;

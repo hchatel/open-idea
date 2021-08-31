@@ -1,6 +1,6 @@
 <script lang="typescript">
-    import { Thumb } from "../../utils/types/vote";
-    import VoteButton from "./VoteButton.svelte";
+    import { Thumb } from '$utils/types/vote';
+    import VoteButton from './VoteButton.svelte';
 
     export let downvotes: number;
     export let upvotes: number;
