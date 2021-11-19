@@ -6,7 +6,7 @@
     export let ideas: Idea[];
 </script>
 
-<Container>
+<Container class="lg:max-w-3xl">
     {#each ideas as idea}
         <IdeaCard {idea} />
     {/each}

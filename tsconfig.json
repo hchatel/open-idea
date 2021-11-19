@@ -28,6 +28,8 @@
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
 			"$models/*": ["src/models/*"],
+			"$screens": ["src/screens"],
+			"$screens/*": ["src/screens/*"],
 			"$utils/*": ["src/utils/*"]
 		}
 	},

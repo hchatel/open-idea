@@ -8,10 +8,10 @@
     const { createdAt, description, downvotes, id, title, upvotes } = idea;
 </script>
 
-<div class="shadow-md rounded-xl margin-top-2 p-4 my-2 max-w-3xl">
+<div class="shadow-md rounded-xl margin-top-2 p-4 my-2 w-full">
     <div class="flex mb-6">
         <div class="flex-grow">
-            <h3 class="text-3xl">{title}</h3>
+            <h3 class="text-2xl">{title}</h3>
             <p class="text-gray-600 text-xs">
                 {createdAt.toLocaleString([], {
                     dateStyle: 'short',

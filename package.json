@@ -23,6 +23,7 @@
     "prettier-plugin-svelte": "^2.2.0",
     "svelte": "^3.34.0",
     "svelte-check": "^2.0.0",
+    "svelte-forms-lib": "^1.10.7",
     "svelte-hero-icons": "^2.4.0",
     "svelte-preprocess": "^4.0.0",
     "tailwindcss": "^2.2.7",
@@ -31,5 +32,6 @@
   },
   "type": "module",
   "dependencies": {
+    "yup": "^0.32.11"
   }
 }

@@ -3,6 +3,6 @@
     export { className as class };
 </script>
 
-<h1 class="text-4xl {className} ">
+<button class={`rounded-md shadow-md hover:shadow-lg ${className}`}>
     <slot />
-</h1>
+</button>
