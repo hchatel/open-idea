@@ -14,6 +14,7 @@
 
     $: error = $errors[name];
 
+    // A way to dynamically set input type : https://github.com/sveltejs/svelte/issues/3921
     const setInputType = (node) => {
         node.type = type;
     };
