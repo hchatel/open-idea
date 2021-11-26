@@ -1,4 +1,5 @@
 <script lang="typescript">
+    import Button from '$components/Button.svelte';
     import { Thumb } from '$utils/types/vote';
     import Icon, { ThumbDown, ThumbUp } from 'svelte-hero-icons';
 
@@ -10,7 +11,7 @@
     const icon = thumbUp ? ThumbUp : ThumbDown;
 </script>
 
-<button class="flex justify-evenly cursor-pointer rounded-md flex-col items-center mr-2 shadow-md hover:shadow-lg w-14">
+<Button class="flex justify-evenly flex-col items-center mr-2 w-14">
     <Icon class={`w-5 h-5 ${color}`} src={icon} />
     <div class="text-gray-600 text-sm">{count}</div>
-</button>
+</Button>
