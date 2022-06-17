@@ -3,13 +3,12 @@
 ## Overview
 
 This project is powered by [SvelteKit](https://kit.svelte.dev), along with:
-- [Typescript](https://www.typescriptlang.org/), the strongly typed programming language that builds on JavaScript
-- [Tailwind](https://tailwindcss.com/), the utility-first CSS framework
-- [Svelte Forms](https://svelte-forms-lib-sapper-docs), Formik inspired library for building forms easily in a Svelte project
 
+-   [Typescript](https://www.typescriptlang.org/), the strongly typed programming language that builds on JavaScript
+-   [Tailwind](https://tailwindcss.com/), the utility-first CSS framework
+-   [Svelte Forms](https://svelte-forms-lib-sapper-docs), Formik inspired library for building forms easily in a Svelte project
 
 ## Getting started
-
 
 ### Fetch project codebase
 
@@ -53,36 +52,41 @@ To add nome new folder route alias, first add it into `svelte.config.cjs`
 
 ```js
 const config = {
-	kit: {
-		vite: {
-			resolve: {
-				alias: {
-					$components: path.resolve('./src/components'),
-					$models: path.resolve('./src/models'),
-					$screens: path.resolve('./src/screens'),
-					$utils: path.resolve('./src/utils')
-				},
-			},
-		},
-	},
+    kit: {
+        vite: {
+            resolve: {
+                alias: {
+                    $components: path.resolve('./src/components'),
+                    $models: path.resolve('./src/models'),
+                    $screens: path.resolve('./src/screens'),
+                    $utils: path.resolve('./src/utils'),
+                },
+            },
+        },
+    },
 };
 ```
 
 For Typescript project, also add it into `tsconfig.json` and make sure it matches previously defined aliases.
+
 ```json
 {
-	"compilerOptions": {
+    "compilerOptions": {
         // ...
-		"paths": {
-			"$components": ["src/components/index"],
-			"$components/*": ["src/components/*"],
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"],
-			"$models/*": ["src/models/*"],
-			"$screens": ["src/screens"],
-			"$screens/*": ["src/screens/*"],
-			"$utils/*": ["src/utils/*"]
-		}
-	}
+        "paths": {
+            "$components": ["src/components/index"],
+            "$components/*": ["src/components/*"],
+            "$lib": ["src/lib"],
+            "$lib/*": ["src/lib/*"],
+            "$models/*": ["src/models/*"],
+            "$screens": ["src/screens"],
+            "$screens/*": ["src/screens/*"],
+            "$utils/*": ["src/utils/*"]
+        }
+    }
 }
 ```
+
+# TODO
+
+Fix `yarn lint` and `yarn check`

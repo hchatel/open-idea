@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import type { Idea } from '$models/idea';
     import TextLink from '../../components/TextLink.svelte';
     import VoteButtons from '../VoteButtons/VoteButtons.svelte';

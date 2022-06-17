@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import Input from '$components/form/Input.svelte';
     import type { Writable } from 'svelte/store';
 

@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     let className = '';
     export { className as class };
     export let href: string;

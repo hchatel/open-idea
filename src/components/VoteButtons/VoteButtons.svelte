@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import { Thumb } from '$utils/types/vote';
     import VoteButton from './VoteButton.svelte';
 

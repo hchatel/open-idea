@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import type { Writable } from 'svelte/store';
 
     type InputType = 'email' | 'password' | 'number' | 'text' | 'textarea';
@@ -8,8 +8,8 @@
         handleChange: () => void,
         label: string,
         name: string,
-        placeholder: string = '',
-        rows: number = 1,
+        placeholder = '',
+        rows = 1,
         type: InputType = 'text';
 
     $: error = $errors[name];
