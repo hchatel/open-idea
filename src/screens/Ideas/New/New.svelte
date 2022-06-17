@@ -1,11 +1,11 @@
-<script lang="typescript">
+<script lang="ts">
     import { Form } from '$components/form';
     import { Container, Title } from '$components';
     import Fields from './Fields.svelte';
     import type { Idea } from '$models/idea';
     import * as yup from 'yup';
 
-    type IdeaFormValues = Omit<Idea, 'createdAt' | 'downvotes' | 'id' | 'upvotes'>;
+    type IdeaFormValues = Pick<Idea, 'description' | 'title'>;
 
     const validationSchema = yup.object().shape({
         description: yup

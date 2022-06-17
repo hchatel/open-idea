@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import IdeaCard from './IdeaCard.svelte';
     import type { Idea } from '$models/idea';
     import Container from '../Container.svelte';

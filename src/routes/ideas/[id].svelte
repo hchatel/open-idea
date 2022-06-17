@@ -3,6 +3,7 @@
     /**
      * @type {import('@sveltejs/kit').Load}
      */
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     export const load = async ({ page }) => {
         const rawIdea: IdeaRaw = (rawIdeas as IdeaRaw[]).find(({ id }) => page.params.id === id);
 
@@ -25,7 +26,7 @@
     };
 </script>
 
-<script lang="typescript">
+<script lang="ts">
     import { Container, VoteButtons } from '$components';
     import type { Idea, IdeaRaw } from '$models/idea';
 

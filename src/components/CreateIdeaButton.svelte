@@ -1,6 +1,6 @@
-<script lang="typescript">
+<script lang="ts">
     import ButtonLink from './ButtonLink.svelte';
-    import Icon, { Plus } from 'svelte-hero-icons';
+    import { Icon, Plus } from 'svelte-hero-icons';
 </script>
 
 <ButtonLink href="/ideas/new">

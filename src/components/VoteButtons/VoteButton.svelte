@@ -1,7 +1,7 @@
-<script lang="typescript">
+<script lang="ts">
     import Button from '$components/Button.svelte';
     import { Thumb } from '$utils/types/vote';
-    import Icon, { ThumbDown, ThumbUp } from 'svelte-hero-icons';
+    import { Icon, ThumbDown, ThumbUp } from 'svelte-hero-icons';
 
     export let thumb: Thumb;
     export let count: number;

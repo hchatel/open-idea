@@ -1,37 +1,37 @@
 {
-  "name": "open-idea",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
-    "preview": "svelte-kit preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
-  },
-  "devDependencies": {
-    "@sveltejs/kit": "next",
-    "@tailwindcss/line-clamp": "^0.2.1",
-    "@typescript-eslint/eslint-plugin": "^4.19.0",
-    "@typescript-eslint/parser": "^4.19.0",
-    "autoprefixer": "^10.3.1",
-    "eslint": "^7.22.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-svelte3": "^3.2.0",
-    "prettier": "~2.2.1",
-    "prettier-plugin-svelte": "^2.2.0",
-    "svelte": "^3.34.0",
-    "svelte-check": "^2.0.0",
-    "svelte-forms-lib": "^1.10.7",
-    "svelte-hero-icons": "^2.4.0",
-    "svelte-preprocess": "^4.0.0",
-    "tailwindcss": "^2.2.7",
-    "tslib": "^2.0.0",
-    "typescript": "^4.0.0"
-  },
-  "type": "module",
-  "dependencies": {
-    "yup": "^0.32.11"
-  }
+    "name": "open-idea",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "svelte-kit build",
+        "check": "svelte-check",
+        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+        "dev": "svelte-kit dev",
+        "format": "prettier --write --plugin-search-dir=. src",
+        "lint": "prettier --check --plugin-search-dir=. src && eslint --ignore-path .gitignore .",
+        "preview": "svelte-kit preview"
+    },
+    "devDependencies": {
+        "@sveltejs/kit": "next",
+        "@tailwindcss/line-clamp": "^0.2.1",
+        "@typescript-eslint/eslint-plugin": "^4.19.0",
+        "@typescript-eslint/parser": "^4.19.0",
+        "autoprefixer": "^10.3.1",
+        "eslint": "^7.22.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-svelte3": "^3.2.0",
+        "prettier": "~2.2.1",
+        "prettier-plugin-svelte": "^2.2.0",
+        "svelte": "^3.34.0",
+        "svelte-check": "^2.2.10",
+        "svelte-forms-lib": "^1.10.7",
+        "svelte-hero-icons": "4.1",
+        "svelte-preprocess": "^4.0.0",
+        "tailwindcss": "^2.2.7",
+        "tslib": "^2.0.0",
+        "typescript": "4.7"
+    },
+    "type": "module",
+    "dependencies": {
+        "yup": "^0.32.11"
+    }
 }

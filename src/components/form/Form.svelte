@@ -1,10 +1,10 @@
-<script lang="typescript">
+<script lang="ts">
     import { createForm } from 'svelte-forms-lib';
 
     // TODO: Find a way to type initialValues and onSubmit correctly
     export let initialValues,
         onSubmit: (values) => void,
-        submitLabel: string = 'Valider',
+        submitLabel = 'Valider',
         validationSchema = undefined;
 
     const { errors, form, handleChange, handleSubmit } = createForm({

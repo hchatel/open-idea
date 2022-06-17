@@ -1,4 +1,4 @@
-<script lang="typescript">
+<script lang="ts">
     import { Container, CreateIdeaButton, IdeaList, Title } from '$components';
     import type { Idea } from '$models/idea';
     import ideasString from '../ideas.json';
