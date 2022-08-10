@@ -1,11 +1,9 @@
-<script context="module" lang="typescript">
+<script context="module" lang="ts">
     import rawIdeas from '../../ideas.json';
-    /**
-     * @type {import('@sveltejs/kit').Load}
-     */
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    export const load = async ({ page }) => {
-        const rawIdea: IdeaRaw = (rawIdeas as IdeaRaw[]).find(({ id }) => page.params.id === id);
+
+    /** @type {import('./__types/[slug]').Load} */
+    export const load = async ({ params }: { params: { id: string } }) => {
+        const rawIdea = (rawIdeas as IdeaRaw[]).find(({ id }) => params.id === id);
 
         if (rawIdea) {
             const idea: Idea = {
@@ -21,7 +19,7 @@
 
         return {
             status: 404,
-            error: new Error(`Could not load idea ${page.params.slug}`),
+            error: new Error(`Could not load idea ${params.id}`),
         };
     };
 </script>

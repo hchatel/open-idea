@@ -1,29 +1,25 @@
+import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
-import path from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-    // Consult https://github.com/sveltejs/svelte-preprocess
-    // for more information about preprocessors
-    preprocess: preprocess(),
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+	],
 
-    kit: {
-        // hydrate the <div id="svelte"> element in src/app.html
-        target: '#svelte',
-        vite: {
-            optimizeDeps: {
-                include: ['svelte-hero-icons'],
-            },
-            resolve: {
-                alias: {
-                    $components: path.resolve('./src/components'),
-                    $models: path.resolve('./src/models'),
-                    $screens: path.resolve('./src/screens'),
-                    $utils: path.resolve('./src/utils'),
-                },
-            },
-        },
-    },
+	kit: {
+		adapter: adapter(),
+		alias: {
+            $components: 'src/components',
+            $models: 'src/models',
+            $screens: 'src/screens',
+            $utils: 'src/utils',
+		}
+	}
 };
 
 export default config;
