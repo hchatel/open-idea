@@ -3,8 +3,8 @@
     import type { Writable } from 'svelte/store';
 
     export let errors: Writable<Record<string | number | symbol, string>>,
-        form: Writable<Record<string, string | number | string[]>> = null,
-        handleChange: () => void = null;
+        form: Writable<Record<string, string | number | string[]>>,
+        handleChange: () => void;
 </script>
 
 <Input label="Titre" name="title" placeholder="Mon idée" {errors} {form} {handleChange} />
